@@ -10,127 +10,32 @@
         * { margin: 0; padding: 0; box-sizing: border-box; cursor: none; }
         html { scroll-behavior: smooth; }
         body { font-family: 'Inter', sans-serif; background: #F7F7F5; color: #111; }
-
-        /* CURSEUR CUSTOM */
-        .cursor {
-            width: 12px; height: 12px;
-            background: #0066FF;
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9999;
-            transition: transform 0.15s ease;
-        }
-        .cursor-follower {
-            width: 36px; height: 36px;
-            border: 1.5px solid #0066FF;
-            border-radius: 50%;
-            position: fixed;
-            pointer-events: none;
-            z-index: 9998;
-            transition: all 0.12s ease;
-            opacity: 0.5;
-        }
-
-        /* NAV */
-        nav {
-            position: fixed; top: 0; width: 100%;
-            background: rgba(247,247,245,0.92);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid #E8E8E4;
-            padding: 0 60px;
-            height: 64px;
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            z-index: 1000;
-        }
+        .cursor { width: 12px; height: 12px; background: #0066FF; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9999; transition: transform 0.15s ease; }
+        .cursor-follower { width: 36px; height: 36px; border: 1.5px solid #0066FF; border-radius: 50%; position: fixed; pointer-events: none; z-index: 9998; transition: all 0.12s ease; opacity: 0.5; }
+        nav { position: fixed; top: 0; width: 100%; background: rgba(247,247,245,0.92); backdrop-filter: blur(20px); border-bottom: 1px solid #E8E8E4; padding: 0 60px; height: 64px; display: flex; justify-content: space-between; align-items: center; z-index: 1000; }
         .logo { font-size: 18px; font-weight: 900; letter-spacing: 3px; color: #111; }
         .logo span { color: #0066FF; }
         nav ul { list-style: none; display: flex; gap: 36px; align-items: center; }
         nav ul a { color: #666; text-decoration: none; font-size: 14px; font-weight: 500; transition: color 0.2s; }
         nav ul a:hover { color: #111; }
-        .nav-cta {
-            background: #111 !important;
-            color: white !important;
-            padding: 10px 22px;
-            border-radius: 100px;
-        }
+        .nav-cta { background: #111 !important; color: white !important; padding: 10px 22px; border-radius: 100px; }
         .nav-cta:hover { background: #0066FF !important; }
-
-        /* HERO */
         .hero-wrapper { background: #F7F7F5; padding-top: 64px; }
-        .hero {
-            min-height: calc(100vh - 64px);
-            padding: 80px 60px;
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 80px;
-            align-items: center;
-            max-width: 1200px;
-            margin: 0 auto;
-        }
-        .hero-tag {
-            display: inline-flex;
-            align-items: center;
-            gap: 8px;
-            background: white;
-            border: 1px solid #E8E8E4;
-            padding: 8px 16px;
-            border-radius: 100px;
-            font-size: 13px;
-            color: #666;
-            margin-bottom: 32px;
-        }
+        .hero { min-height: calc(100vh - 64px); padding: 80px 60px; display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; max-width: 1200px; margin: 0 auto; }
+        .hero-tag { display: inline-flex; align-items: center; gap: 8px; background: white; border: 1px solid #E8E8E4; padding: 8px 16px; border-radius: 100px; font-size: 13px; color: #666; margin-bottom: 32px; }
         .hero-tag .dot { width: 8px; height: 8px; background: #22c55e; border-radius: 50%; animation: pulse 2s infinite; }
         @keyframes pulse { 0%, 100% { opacity: 1; } 50% { opacity: 0.4; } }
-        .hero h1 {
-            font-size: 68px;
-            font-weight: 900;
-            line-height: 1.0;
-            letter-spacing: -3px;
-            color: #111;
-            margin-bottom: 24px;
-        }
+        .hero h1 { font-size: 68px; font-weight: 900; line-height: 1.0; letter-spacing: -3px; color: #111; margin-bottom: 24px; }
         .hero h1 em { font-style: normal; color: #0066FF; }
-        .hero-desc {
-            font-size: 17px;
-            color: #666;
-            line-height: 1.7;
-            margin-bottom: 16px;
-            max-width: 460px;
-        }
-        .hero-location {
-            font-size: 14px;
-            color: #999;
-            margin-bottom: 40px;
-            display: flex;
-            align-items: center;
-            gap: 6px;
-        }
+        .hero-desc { font-size: 17px; color: #666; line-height: 1.7; margin-bottom: 16px; max-width: 460px; }
+        .hero-location { font-size: 14px; color: #999; margin-bottom: 40px; display: flex; align-items: center; gap: 6px; }
         .hero-btns { display: flex; gap: 12px; flex-wrap: wrap; }
-        .btn-dark {
-            background: #111; color: white;
-            padding: 14px 28px; border-radius: 100px;
-            text-decoration: none; font-weight: 600; font-size: 15px;
-            transition: all 0.2s; border: none; cursor: none;
-        }
+        .btn-dark { background: #111; color: white; padding: 14px 28px; border-radius: 100px; text-decoration: none; font-weight: 600; font-size: 15px; transition: all 0.2s; border: none; cursor: none; }
         .btn-dark:hover { background: #0066FF; }
-        .btn-light {
-            background: white; color: #111;
-            padding: 14px 28px; border-radius: 100px;
-            text-decoration: none; font-weight: 600; font-size: 15px;
-            border: 1px solid #E8E8E4; transition: all 0.2s;
-        }
+        .btn-light { background: white; color: #111; padding: 14px 28px; border-radius: 100px; text-decoration: none; font-weight: 600; font-size: 15px; border: 1px solid #E8E8E4; transition: all 0.2s; }
         .btn-light:hover { border-color: #111; }
-
-        /* BENTO GRID */
         .hero-right { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
-        .bento {
-            background: white; border: 1px solid #E8E8E4;
-            border-radius: 20px; padding: 28px;
-            transition: all 0.3s;
-        }
+        .bento { background: white; border: 1px solid #E8E8E4; border-radius: 20px; padding: 28px; transition: all 0.3s; }
         .bento:hover { border-color: #0066FF; box-shadow: 0 0 0 4px rgba(0,102,255,0.06); }
         .bento-wide { grid-column: span 2; }
         .bento-icon { font-size: 28px; margin-bottom: 12px; }
@@ -139,8 +44,6 @@
         .bento-stat { font-size: 44px; font-weight: 900; color: #0066FF; letter-spacing: -2px; }
         .bento-stat-label { font-size: 12px; color: #888; margin-top: 4px; font-weight: 500; }
         .counter { display: inline-block; }
-
-        /* ABOUT */
         .about-wrapper { background: white; border-top: 1px solid #E8E8E4; border-bottom: 1px solid #E8E8E4; }
         .about { max-width: 1200px; margin: 0 auto; padding: 80px 60px; display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: center; }
         .about-label { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #0066FF; margin-bottom: 16px; }
@@ -148,93 +51,43 @@
         .about-right p { font-size: 17px; color: #555; line-height: 1.8; margin-bottom: 16px; }
         .about-right p strong { color: #111; font-weight: 700; }
         .about-tags { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 24px; }
-        .tag {
-            background: #F7F7F5; border: 1px solid #E8E8E4;
-            padding: 8px 16px; border-radius: 100px;
-            font-size: 13px; font-weight: 500; color: #555;
-        }
-
-        /* SERVICES */
+        .tag { background: #F7F7F5; border: 1px solid #E8E8E4; padding: 8px 16px; border-radius: 100px; font-size: 13px; font-weight: 500; color: #555; }
         .services-wrapper { background: #F7F7F5; }
         .section { max-width: 1200px; margin: 0 auto; padding: 100px 60px; }
         .section-label { font-size: 12px; font-weight: 700; letter-spacing: 3px; text-transform: uppercase; color: #0066FF; margin-bottom: 16px; }
         .section-title { font-size: 44px; font-weight: 900; letter-spacing: -2px; line-height: 1.1; margin-bottom: 48px; }
         .cards { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
-        .card {
-            background: white; border: 1px solid #E8E8E4;
-            border-radius: 20px; padding: 36px;
-            transition: all 0.3s;
-        }
+        .card { background: white; border: 1px solid #E8E8E4; border-radius: 20px; padding: 36px; transition: all 0.3s; }
         .card:hover { border-color: #0066FF; transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,102,255,0.08); }
         .card-icon { font-size: 28px; margin-bottom: 20px; }
         .card h3 { font-size: 18px; font-weight: 700; margin-bottom: 10px; }
         .card p { color: #666; font-size: 14px; line-height: 1.6; }
         .card-price { margin-top: 20px; padding-top: 20px; border-top: 1px solid #f0f0f0; font-size: 13px; color: #0066FF; font-weight: 600; }
-
-        /* PROJETS */
         .projets-wrapper { background: #111; }
         .projets-section { max-width: 1200px; margin: 0 auto; padding: 100px 60px; }
         .projets-section .section-label { color: #0066FF; }
         .projets-section .section-title { color: white; }
         .projet-cards { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
-        .projet-card {
-            background: #1a1a1a; border: 1px solid #2a2a2a;
-            border-radius: 20px; padding: 36px;
-            transition: all 0.3s;
-        }
+        .projet-card { background: #1a1a1a; border: 1px solid #2a2a2a; border-radius: 20px; padding: 36px; transition: all 0.3s; }
         .projet-card:hover { border-color: #0066FF; }
-        .projet-tag {
-            background: rgba(0,102,255,0.15); color: #0066FF;
-            padding: 4px 12px; border-radius: 100px;
-            font-size: 12px; font-weight: 600;
-            display: inline-block; margin-bottom: 20px;
-        }
+        .projet-tag { background: rgba(0,102,255,0.15); color: #0066FF; padding: 4px 12px; border-radius: 100px; font-size: 12px; font-weight: 600; display: inline-block; margin-bottom: 20px; }
         .projet-card h3 { font-size: 22px; font-weight: 700; color: white; margin-bottom: 10px; }
         .projet-card p { color: #888; line-height: 1.6; margin-bottom: 24px; font-size: 14px; }
         .projet-link { color: #0066FF; text-decoration: none; font-weight: 600; font-size: 14px; }
         .projet-link:hover { text-decoration: underline; }
-        .projet-coming {
-            background: #1a1a1a; border: 1px dashed #333;
-            border-radius: 20px; padding: 36px;
-            display: flex; align-items: center; justify-content: center;
-            flex-direction: column; gap: 12px; text-align: center;
-        }
+        .projet-coming { background: #1a1a1a; border: 1px dashed #333; border-radius: 20px; padding: 36px; display: flex; align-items: center; justify-content: center; flex-direction: column; gap: 12px; text-align: center; }
         .projet-coming p { color: #555; font-size: 14px; }
-        .projet-coming span { font-size: 32px; }
-
-        /* CONTACT */
         .contact-wrapper { background: #F7F7F5; }
         .contact-section { max-width: 680px; margin: 0 auto; padding: 100px 60px; text-align: center; }
         .contact-section .section-title { font-size: 52px; margin-bottom: 16px; }
         .contact-section > p { color: #666; font-size: 17px; margin-bottom: 48px; line-height: 1.6; }
         .contact-form { display: flex; flex-direction: column; gap: 14px; text-align: left; }
-        .contact-form input, .contact-form textarea {
-            padding: 14px 18px;
-            border: 1px solid #E8E8E4;
-            border-radius: 12px;
-            font-size: 15px;
-            outline: none;
-            transition: all 0.2s;
-            font-family: 'Inter', sans-serif;
-            background: white;
-        }
-        .contact-form input:focus, .contact-form textarea:focus {
-            border-color: #0066FF;
-            box-shadow: 0 0 0 3px rgba(0,102,255,0.1);
-        }
+        .contact-form input, .contact-form textarea { padding: 14px 18px; border: 1px solid #E8E8E4; border-radius: 12px; font-size: 15px; outline: none; transition: all 0.2s; font-family: 'Inter', sans-serif; background: white; }
+        .contact-form input:focus, .contact-form textarea:focus { border-color: #0066FF; box-shadow: 0 0 0 3px rgba(0,102,255,0.1); }
         .contact-form textarea { height: 130px; resize: none; }
         .contact-note { font-size: 13px; color: #999; text-align: center; margin-top: 8px; }
-
-        /* FOOTER */
-        footer {
-            background: #111; color: #555;
-            text-align: center; padding: 32px 60px;
-            font-size: 13px; border-top: 1px solid #222;
-        }
+        footer { background: #111; color: #555; text-align: center; padding: 32px 60px; font-size: 13px; border-top: 1px solid #222; }
         footer span { color: #0066FF; }
-
-
-        /* FAQ */
         .faq-wrapper { background: #F7F7F5; border-top: 1px solid #E8E8E4; }
         .faq-grid { display: grid; grid-template-columns: 1fr 2fr; gap: 80px; align-items: start; }
         .faq-list { display: flex; flex-direction: column; gap: 12px; }
@@ -250,153 +103,44 @@
         .faq-answer { max-height: 0; overflow: hidden; transition: max-height 0.35s ease; padding: 0 24px; }
         .faq-answer-inner { padding-bottom: 20px; font-size: 14px; color: #666; line-height: 1.7; border-top: 1px solid #F0F0EC; padding-top: 16px; }
         .faq-item.open .faq-answer { max-height: 300px; }
-
-        /* COOKIE BANNER */
-        .cookie-banner {
-            position: fixed;
-            bottom: 24px;
-            left: 50%;
-            transform: translateX(-50%);
-            background: #111;
-            color: white;
-            padding: 16px 24px;
-            border-radius: 16px;
-            display: flex;
-            align-items: center;
-            gap: 20px;
-            z-index: 9997;
-            box-shadow: 0 8px 32px rgba(0,0,0,0.2);
-            max-width: 680px;
-            width: calc(100% - 48px);
-            font-size: 14px;
-            transition: all 0.4s ease;
-        }
-        .cookie-banner.hidden {
-            opacity: 0;
-            transform: translateX(-50%) translateY(20px);
-            pointer-events: none;
-        }
+        .cookie-banner { position: fixed; bottom: 24px; left: 50%; transform: translateX(-50%); background: #111; color: white; padding: 16px 24px; border-radius: 16px; display: flex; align-items: center; gap: 20px; z-index: 9997; box-shadow: 0 8px 32px rgba(0,0,0,0.2); max-width: 680px; width: calc(100% - 48px); font-size: 14px; transition: all 0.4s ease; }
+        .cookie-banner.hidden { opacity: 0; transform: translateX(-50%) translateY(20px); pointer-events: none; }
         .cookie-banner p { color: #aaa; line-height: 1.5; flex: 1; }
         .cookie-banner p a { color: white; text-decoration: underline; }
         .cookie-btns { display: flex; gap: 8px; flex-shrink: 0; }
-        .cookie-accept {
-            background: #0066FF; color: white;
-            border: none; padding: 10px 20px;
-            border-radius: 100px; font-size: 13px;
-            font-weight: 600; cursor: none;
-            font-family: 'Inter', sans-serif;
-            transition: background 0.2s;
-        }
+        .cookie-accept { background: #0066FF; color: white; border: none; padding: 10px 20px; border-radius: 100px; font-size: 13px; font-weight: 600; cursor: none; font-family: 'Inter', sans-serif; transition: background 0.2s; }
         .cookie-accept:hover { background: #0052cc; }
-        .cookie-decline {
-            background: transparent; color: #666;
-            border: 1px solid #333; padding: 10px 20px;
-            border-radius: 100px; font-size: 13px;
-            font-weight: 600; cursor: none;
-            font-family: 'Inter', sans-serif;
-            transition: all 0.2s;
-        }
+        .cookie-decline { background: transparent; color: #666; border: 1px solid #333; padding: 10px 20px; border-radius: 100px; font-size: 13px; font-weight: 600; cursor: none; font-family: 'Inter', sans-serif; transition: all 0.2s; }
         .cookie-decline:hover { border-color: #666; color: #aaa; }
-        @media (max-width: 600px) {
-            .cookie-banner { flex-direction: column; align-items: flex-start; bottom: 16px; }
-        }
-
-        /* TEMOIGNAGES */
         .temoignages-wrapper { background: white; border-top: 1px solid #E8E8E4; border-bottom: 1px solid #E8E8E4; }
         .temoignages-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; margin-top: 48px; }
-        .temoignage-card {
-            background: #F7F7F5; border: 1px solid #E8E8E4;
-            border-radius: 20px; padding: 32px;
-            transition: all 0.3s;
-        }
+        .temoignage-card { background: #F7F7F5; border: 1px solid #E8E8E4; border-radius: 20px; padding: 32px; transition: all 0.3s; }
         .temoignage-card:hover { border-color: #0066FF; transform: translateY(-4px); box-shadow: 0 20px 40px rgba(0,102,255,0.08); }
         .temoignage-stars { color: #FFB800; font-size: 16px; margin-bottom: 16px; letter-spacing: 2px; }
         .temoignage-text { font-size: 15px; color: #444; line-height: 1.7; margin-bottom: 24px; font-style: italic; }
         .temoignage-author { display: flex; align-items: center; gap: 12px; }
-        .temoignage-avatar {
-            width: 44px; height: 44px;
-            background: #0066FF; color: white;
-            border-radius: 50%; display: flex;
-            align-items: center; justify-content: center;
-            font-size: 16px; font-weight: 700;
-            flex-shrink: 0;
-        }
+        .temoignage-avatar { width: 44px; height: 44px; background: #0066FF; color: white; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 16px; font-weight: 700; flex-shrink: 0; }
         .temoignage-name { font-size: 14px; font-weight: 700; color: #111; }
         .temoignage-role { font-size: 12px; color: #888; margin-top: 2px; }
-        @media (max-width: 900px) {
-            .temoignages-grid { grid-template-columns: 1fr; }
-        }
-
-        /* TOGGLE LANGUE */
-        .lang-toggle {
-            display: flex;
-            align-items: center;
-            gap: 6px;
-            background: #F7F7F5;
-            border: 1px solid #E8E8E4;
-            border-radius: 100px;
-            padding: 6px 14px;
-            font-size: 13px;
-            font-weight: 600;
-            color: #111;
-            cursor: none;
-            font-family: 'Inter', sans-serif;
-            transition: all 0.2s;
-        }
+        .lang-toggle { display: flex; align-items: center; gap: 6px; background: #F7F7F5; border: 1px solid #E8E8E4; border-radius: 100px; padding: 6px 14px; font-size: 13px; font-weight: 600; color: #111; cursor: none; font-family: 'Inter', sans-serif; transition: all 0.2s; }
         .lang-toggle:hover { border-color: #0066FF; color: #0066FF; }
-
-        /* HAMBURGER MOBILE */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: none;
-            background: none;
-            border: none;
-            padding: 4px;
-        }
-        .hamburger span {
-            width: 24px;
-            height: 2px;
-            background: #111;
-            border-radius: 2px;
-            transition: all 0.3s ease;
-            display: block;
-        }
+        .hamburger { display: none; flex-direction: column; gap: 5px; cursor: none; background: none; border: none; padding: 4px; }
+        .hamburger span { width: 24px; height: 2px; background: #111; border-radius: 2px; transition: all 0.3s ease; display: block; }
         .hamburger.open span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
         .hamburger.open span:nth-child(2) { opacity: 0; }
         .hamburger.open span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
-        .mobile-menu {
-            display: none;
-            position: fixed;
-            top: 64px;
-            left: 0;
-            width: 100%;
-            background: rgba(247,247,245,0.98);
-            backdrop-filter: blur(20px);
-            border-bottom: 1px solid #E8E8E4;
-            padding: 24px 24px;
-            flex-direction: column;
-            gap: 20px;
-            z-index: 999;
-        }
+        .mobile-menu { display: none; position: fixed; top: 64px; left: 0; width: 100%; background: rgba(247,247,245,0.98); backdrop-filter: blur(20px); border-bottom: 1px solid #E8E8E4; padding: 24px; flex-direction: column; gap: 20px; z-index: 999; }
         .mobile-menu.open { display: flex; }
-        .mobile-menu a {
-            color: #111;
-            text-decoration: none;
-            font-size: 18px;
-            font-weight: 600;
-            padding: 8px 0;
-            border-bottom: 1px solid #E8E8E4;
-        }
+        .mobile-menu a { color: #111; text-decoration: none; font-size: 18px; font-weight: 600; padding: 8px 0; border-bottom: 1px solid #E8E8E4; }
         .mobile-menu a:last-child { border-bottom: none; }
         .mobile-menu a:hover { color: #0066FF; }
-        /* RESPONSIVE */
+        .whatsapp-btn { position: fixed; bottom: 30px; right: 30px; background: #25D366; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 20px rgba(37,211,102,0.4); z-index: 9999; transition: all 0.3s; cursor: none; }
+        .whatsapp-btn:hover { transform: scale(1.1); box-shadow: 0 6px 25px rgba(37,211,102,0.5); }
         @media (max-width: 900px) {
             * { cursor: auto; }
             .cursor, .cursor-follower { display: none; }
             nav { padding: 0 24px; }
-            nav ul li:not(:last-child) { display: none; }
+            nav ul { display: none; }
             .hero { grid-template-columns: 1fr; padding: 60px 24px; gap: 40px; }
             .hero h1 { font-size: 44px; letter-spacing: -2px; }
             .hero-right { display: none; }
@@ -406,12 +150,15 @@
             .contact-section { padding: 60px 24px; }
             .cards { grid-template-columns: 1fr; }
             .projet-cards { grid-template-columns: 1fr; }
+            .temoignages-grid { grid-template-columns: 1fr; }
+            .faq-grid { grid-template-columns: 1fr; }
             .hamburger { display: flex; }
-            nav ul { display: none; }
+            .cookie-banner { flex-direction: column; align-items: flex-start; bottom: 16px; }
         }
     </style>
 </head>
 <body>
+
     <!-- BARRE ADMIN -->
     <div id="adminBar" style="display:none;position:fixed;top:0;left:0;width:100%;background:#111;color:white;padding:12px 24px;justify-content:space-between;align-items:center;z-index:99999;">
         <span style="font-size:13px;font-weight:700;letter-spacing:2px;">COMMIT <span style="color:#0066FF;">& GO</span> — MODE ADMIN</span>
@@ -422,7 +169,6 @@
         </div>
     </div>
 
-
     <div class="cursor" id="cursor"></div>
     <div class="cursor-follower" id="follower"></div>
 
@@ -430,32 +176,30 @@
         <div class="logo">COMMIT<span> & GO</span></div>
         <ul>
             <li><a href="#about" id="navAbout">À propos</a></li>
-<li><a href="#services" id="navServices">Services</a></li>
-<li><a href="#projets" id="navProjects">Projets</a></li>
-<li><a href="#contact" class="nav-cta" id="navContact">Me contacter</a></li>
-<li><button type="button" class="lang-toggle" id="langToggle">🌐 EN</button></li>
+            <li><a href="#services" id="navServices">Services</a></li>
+            <li><a href="#projets" id="navProjects">Projets</a></li>
+            <li><a href="#contact" class="nav-cta" id="navContact">Me contacter</a></li>
+            <li><button type="button" class="lang-toggle" id="langToggle">🌐 EN</button></li>
         </ul>
         <button class="hamburger" id="hamburger" onclick="toggleMenu()">
-            <span></span>
-            <span></span>
-            <span></span>
+            <span></span><span></span><span></span>
         </button>
     </nav>
+
     <div class="mobile-menu" id="mobileMenu">
-        <a href="#about" onclick="toggleMenu()">À propos</a>
-        <a href="#services" onclick="toggleMenu()">Services</a>
-        <a href="#projets" onclick="toggleMenu()">Projets</a>
-        <a href="#contact" onclick="toggleMenu()">Me contacter</a>
+        <a href="#about" onclick="toggleMenu()" id="mobileAbout">À propos</a>
+        <a href="#services" onclick="toggleMenu()" id="mobileServices">Services</a>
+        <a href="#projets" onclick="toggleMenu()" id="mobileProjects">Projets</a>
+        <a href="#contact" onclick="toggleMenu()" id="mobileContact">Me contacter</a>
     </div>
 
-    
     <div class="hero-wrapper">
     <section class="hero">
         <div class="hero-left" data-aos="fade-right">
             <div class="hero-tag"><span class="dot"></span> <span id="heroTag">Disponible pour de nouveaux projets</span></div>
             <h1 id="heroTitle">{{ content.get("heroTitle", "Vos clients vous<br>cherchent en ligne.<br><em>Soyez là.</em>") | safe }}</h1>
-            <p class="hero-desc" id="heroDesc">{{ content.get("heroDesc", "Web dev européen, passionné par les interfaces modernes et l'aide à la visibilité digitale de mes clients.") }}</p>
-            <p class="hero-location" id="heroLocation">📍 Bruxelles, Belgique — disponible partout dans le monde</p>
+            <p class="hero-desc" id="heroDesc">{{ content.get("heroDesc", "Web dev européen, passionné par les interfaces modernes et l'aide à la visibilité digitale de mes clients.") | safe }}</p>
+            <p class="hero-location" id="heroLocation">{{ content.get("heroLocation", "📍 Bruxelles, Belgique — disponible partout dans le monde") | safe }}</p>
             <div class="hero-btns">
                 <a href="#projets" class="btn-dark" id="heroBtnProjects">Voir mes projets</a>
                 <a href="#contact" class="btn-light" id="heroBtnContact">Me contacter</a>
@@ -463,7 +207,7 @@
         </div>
         <div class="hero-right" data-aos="fade-left" data-aos-delay="200">
             <div class="bento bento-wide">
-                <div class="bento-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/><path d="M9 12H4s.55-3.03 2-4c1.62-1.08 5 0 5 0"/><path d="M12 15v5s3.03-.55 4-2c1.08-1.62 0-5 0-5"/></svg></div>
+                <div class="bento-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><path d="M4.5 16.5c-1.5 1.26-2 5-2 5s3.74-.5 5-2c.71-.84.7-2.13-.09-2.91a2.18 2.18 0 0 0-2.91-.09z"/><path d="m12 15-3-3a22 22 0 0 1 2-3.95A12.88 12.88 0 0 1 22 2c0 2.72-.78 7.5-6 11a22.35 22.35 0 0 1-4 2z"/></svg></div>
                 <h3 id="bento1Title">Livraison rapide & propre</h3>
                 <p id="bento1Desc">Sites livrés en 2 à 4 semaines. Code propre, documenté et facile à faire évoluer.</p>
             </div>
@@ -489,18 +233,16 @@
     </section>
     </div>
 
-
     <div class="about-wrapper">
     <section class="about" id="about">
         <div data-aos="fade-right">
             <div class="about-label" id="aboutLabel">À propos</div>
             <div class="about-title" id="aboutTitle">Qui suis-je ?</div>
         </div>
-
         <div class="about-right" data-aos="fade-left" data-aos-delay="100">
-            <p id="aboutP1">{{ content.get("aboutP1", "") | safe }}</strong>, web developer basé à <strong>Bruxelles</strong>. Je conçois des sites web et applications modernes qui aident mes clients à exister et rayonner en ligne.</p>
-            <p id="aboutP2">{{ content.get("aboutP2", "") | safe }}</strong>. Chaque projet est pensé pour être rapide, visible sur Google, et facile à utiliser.</p>
-            <p id="aboutP3">{{ content.get("aboutP3", "") | safe }}</strong> pour mes premiers clients.</p>
+            <p id="aboutP1">{{ content.get("aboutP1", "Je m'appelle <strong>Louan</strong>, web developer basé à <strong>Bruxelles</strong>. Je conçois des sites web et applications modernes qui aident mes clients à exister et rayonner en ligne.") | safe }}</p>
+            <p id="aboutP2">{{ content.get("aboutP2", "Ce qui me différencie ? Je ne livre pas juste un site, je construis un <strong>outil digital qui travaille pour vous</strong>. Chaque projet est pensé pour être rapide, visible sur Google, et facile à utiliser.") | safe }}</p>
+            <p id="aboutP3">{{ content.get("aboutP3", "Disponible pour des projets partout dans le monde. <strong>Tarifs de lancement disponibles</strong> pour mes premiers clients.") | safe }}</p>
             <div class="about-tags">
                 <span class="tag">HTML · CSS · JS</span>
                 <span class="tag">Python · Flask</span>
@@ -513,7 +255,6 @@
     </section>
     </div>
 
-
     <div class="services-wrapper">
     <section class="section" id="services">
         <div data-aos="fade-up">
@@ -523,26 +264,25 @@
         <div class="cards" data-aos="fade-up" data-aos-delay="100">
             <div class="card">
                 <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-                <h3 id="service1Title">{{ content.get("service1Title", "") | safe }}</h3>
-                <p id="service1Desc">{{ content.get("service1Desc", "") | safe }}</p>
+                <h3 id="service1Title">{{ content.get("service1Title", "Sites Web") | safe }}</h3>
+                <p id="service1Desc">{{ content.get("service1Desc", "Création de sites vitrines modernes, rapides et optimisés pour tous les écrans. Design soigné, code propre.") | safe }}</p>
                 <div class="card-price" id="service1Price">→ Tarif de lancement disponible</div>
             </div>
             <div class="card">
                 <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-                <h3 id="service2Title">{{ content.get("service2Title", "") | safe }}</h3>
-                <p id="service2Desc">{{ content.get("service2Desc", "") | safe }}</p>
+                <h3 id="service2Title">{{ content.get("service2Title", "Web Apps") | safe }}</h3>
+                <p id="service2Desc">{{ content.get("service2Desc", "Applications web sur mesure pour automatiser et digitaliser vos processus métier. Livrées clé en main.") | safe }}</p>
                 <div class="card-price" id="service2Price">→ Sur devis selon complexité</div>
             </div>
             <div class="card">
                 <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-                <h3 id="service3Title">{{ content.get("service3Title", "") | safe }}</h3>
-                <p id="service3Desc">{{ content.get("service3Desc", "") | safe }}</p>
+                <h3 id="service3Title">{{ content.get("service3Title", "SEO & Performance") | safe }}</h3>
+                <p id="service3Desc">{{ content.get("service3Desc", "Site optimisé pour Google dès la conception. Score Lighthouse supérieur à 90/100 garanti à la livraison.") | safe }}</p>
                 <div class="card-price" id="service3Price">→ Inclus dans chaque projet</div>
             </div>
         </div>
     </section>
     </div>
-
 
     <div style="background:white;border-top:1px solid #E8E8E4;border-bottom:1px solid #E8E8E4;">
     <section style="max-width:1200px;margin:0 auto;padding:100px 60px;">
@@ -552,33 +292,26 @@
         </div>
         <div style="display:grid;grid-template-columns:repeat(3,1fr);gap:40px;margin-top:60px;" data-aos="fade-up" data-aos-delay="100">
             <div style="text-align:center;">
-                <div style="width:60px;height:60px;background:#EEF4FF;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
-                </div>
+                <div style="width:60px;height:60px;background:#EEF4FF;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
                 <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:#0066FF;margin-bottom:12px;">ÉTAPE 01</div>
-                <h3 style="font-size:20px;font-weight:800;margin-bottom:12px;" id="step1Title">{{ content.get("step1Title", "") | safe }}</h3>
-                <p style="color:#666;font-size:15px;line-height:1.6;" id="step1Desc">{{ content.get("step1Desc", "") | safe }}</p>
+                <h3 style="font-size:20px;font-weight:800;margin-bottom:12px;" id="step1Title">{{ content.get("step1Title", "On discute") | safe }}</h3>
+                <p style="color:#666;font-size:15px;line-height:1.6;" id="step1Desc">{{ content.get("step1Desc", "On échange sur votre projet, vos besoins et vos objectifs. Un appel de 30 minutes suffit pour cadrer l'essentiel.") | safe }}</p>
             </div>
             <div style="text-align:center;">
-                <div style="width:60px;height:60px;background:#EEF4FF;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
-                </div>
+                <div style="width:60px;height:60px;background:#EEF4FF;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg></div>
                 <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:#0066FF;margin-bottom:12px;">ÉTAPE 02</div>
-                <h3 style="font-size:20px;font-weight:800;margin-bottom:12px;" id="step2Title">{{ content.get("step2Title", "") | safe }}</h3>
-                <p style="color:#666;font-size:15px;line-height:1.6;" id="step2Desc">{{ content.get("step2Desc", "") | safe }}</p>
+                <h3 style="font-size:20px;font-weight:800;margin-bottom:12px;" id="step2Title">{{ content.get("step2Title", "Je conçois & code") | safe }}</h3>
+                <p style="color:#666;font-size:15px;line-height:1.6;" id="step2Desc">{{ content.get("step2Desc", "Je design et développe votre site en 2 à 4 semaines. Vous suivez l'avancement et validez à chaque étape clé.") | safe }}</p>
             </div>
             <div style="text-align:center;">
-                <div style="width:60px;height:60px;background:#EEF4FF;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
-                    <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
-                </div>
+                <div style="width:60px;height:60px;background:#EEF4FF;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;"><svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg></div>
                 <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:#0066FF;margin-bottom:12px;">ÉTAPE 03</div>
-                <h3 style="font-size:20px;font-weight:800;margin-bottom:12px;" id="step3Title">{{ content.get("step3Title", "") | safe }}</h3>
-                <p style="color:#666;font-size:15px;line-height:1.6;" id="step3Desc">{{ content.get("step3Desc", "") | safe }}</p>
+                <h3 style="font-size:20px;font-weight:800;margin-bottom:12px;" id="step3Title">{{ content.get("step3Title", "On livre & vous brillez") | safe }}</h3>
+                <p style="color:#666;font-size:15px;line-height:1.6;" id="step3Desc">{{ content.get("step3Desc", "Votre site est en ligne, optimisé et prêt à convertir. Je vous forme à la gestion de base et je reste disponible.") | safe }}</p>
             </div>
         </div>
     </section>
     </div>
-
 
     <div class="projets-wrapper">
     <section class="projets-section" id="projets">
@@ -589,19 +322,18 @@
         <div class="projet-cards" style="margin-top:48px;" data-aos="fade-up" data-aos-delay="100">
             <div class="projet-card">
                 <span class="projet-tag">Python · Flask · Web</span>
-                <h3 id="project1Title">Password Checker</h3>
-                <p id="project1Desc">Application web qui analyse la force des mots de passe en temps réel avec un système de scoring avancé.</p>
+                <h3 id="project1Title">{{ content.get("project1Title", "Password Checker") | safe }}</h3>
+                <p id="project1Desc">{{ content.get("project1Desc", "Application web qui analyse la force des mots de passe en temps réel avec un système de scoring avancé.") | safe }}</p>
                 <a href="https://password-checker-lgal.onrender.com" class="projet-link" target="_blank" id="project1Link">Voir le projet →</a>
             </div>
             <div class="projet-coming">
                 <svg width="40" height="40" viewBox="0 0 24 24" fill="none" stroke="#333" stroke-width="1.5"><circle cx="12" cy="12" r="10"/><line x1="12" y1="8" x2="12" y2="12"/><line x1="12" y1="16" x2="12.01" y2="16"/></svg>
-                <h3 style="color:#555;font-size:18px;font-weight:700;" id="project2Title">Projets en cours</h3>
-                <p id="project2Desc">Nouveaux projets à venir — <span style="color:#0066FF;">tarifs de lancement disponibles</span></p>
+                <h3 style="color:#555;font-size:18px;font-weight:700;" id="project2Title">{{ content.get("project2Title", "Projets en cours") | safe }}</h3>
+                <p id="project2Desc">{{ content.get("project2Desc", "Nouveaux projets à venir — <span style='color:#0066FF;'>tarifs de lancement disponibles</span>") | safe }}</p>
             </div>
         </div>
     </section>
     </div>
-
 
     <div class="temoignages-wrapper">
     <section class="section" id="temoignages">
@@ -612,41 +344,40 @@
         <div class="temoignages-grid" data-aos="fade-up" data-aos-delay="100">
             <div class="temoignage-card">
                 <div class="temoignage-stars">★★★★★</div>
-                <p class="temoignage-text" id="testimonial1Text">{{ content.get("testimonial1Text", "") | safe }}</p>
+                <p class="temoignage-text" id="testimonial1Text">{{ content.get("testimonial1Text", "\"Louan a livré notre site en 3 semaines chrono. Design moderne, rapide et exactement ce qu'on voulait. On recommande les yeux fermés !\"") | safe }}</p>
                 <div class="temoignage-author">
                     <div class="temoignage-avatar">S</div>
                     <div>
                         <div class="temoignage-name">Sophie M.</div>
-                        <div class="temoignage-role" id="testimonial1Role">Gérante — Boutique en ligne</div>
+                        <div class="temoignage-role" id="testimonial1Role">{{ content.get("testimonial1Role", "Gérante — Boutique en ligne") | safe }}</div>
                     </div>
                 </div>
             </div>
             <div class="temoignage-card">
                 <div class="temoignage-stars">★★★★★</div>
-                <p class="temoignage-text" id="testimonial2Text">{{ content.get("testimonial2Text", "") | safe }}</p>
+                <p class="temoignage-text" id="testimonial2Text">{{ content.get("testimonial2Text", "\"Très professionnel, à l'écoute et réactif. Notre site est maintenant visible sur Google et on reçoit des demandes chaque semaine.\"") | safe }}</p>
                 <div class="temoignage-author">
                     <div class="temoignage-avatar">T</div>
                     <div>
                         <div class="temoignage-name">Thomas L.</div>
-                        <div class="temoignage-role" id="testimonial2Role">Fondateur — Startup Tech</div>
+                        <div class="temoignage-role" id="testimonial2Role">{{ content.get("testimonial2Role", "Fondateur — Startup Tech") | safe }}</div>
                     </div>
                 </div>
             </div>
             <div class="temoignage-card">
                 <div class="temoignage-stars">★★★★★</div>
-                <p class="temoignage-text" id="testimonial3Text">{{ content.get("testimonial3Text", "") | safe }}</p>
+                <p class="temoignage-text" id="testimonial3Text">{{ content.get("testimonial3Text", "\"Rapport qualité-prix imbattable. Louan a su comprendre nos besoins dès le premier appel et le résultat dépasse nos attentes.\"") | safe }}</p>
                 <div class="temoignage-author">
                     <div class="temoignage-avatar">A</div>
                     <div>
                         <div class="temoignage-name">Amina K.</div>
-                        <div class="temoignage-role" id="testimonial3Role">Directrice — Cabinet Conseil</div>
+                        <div class="temoignage-role" id="testimonial3Role">{{ content.get("testimonial3Role", "Directrice — Cabinet Conseil") | safe }}</div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
     </div>
-
 
     <div class="faq-wrapper">
     <section class="section" id="faq">
@@ -659,70 +390,72 @@
             </div>
             <div class="faq-list" data-aos="fade-left" data-aos-delay="100">
                 <div class="faq-item open">
-                    <button class="faq-question" id="faqQ1">Combien coûte un site web ?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div></button>
-                    <div class="faq-answer"><div class="faq-answer-inner" id="faqA1">{{ content.get("faqA1", "") | safe }}</strong> pour mes premiers clients. Devis gratuit sous 24h.</div></div>
+                    <button class="faq-question"><span id="faqQ1">Combien coûte un site web ?</span><div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div></button>
+                    <div class="faq-answer"><div class="faq-answer-inner" id="faqA1">{{ content.get("faqA1", "Les tarifs varient selon la complexité. Je propose des <strong>tarifs de lancement attractifs</strong> pour mes premiers clients. Devis gratuit sous 24h.") | safe }}</div></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" id="faqQ2">Combien de temps pour livrer mon site ?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div></button>
-                    <div class="faq-answer"><div class="faq-answer-inner" id="faqA2">{{ content.get("faqA2", "") | safe }}</strong>. Je vous tiens informé à chaque étape.</div></div>
+                    <button class="faq-question"><span id="faqQ2">Combien de temps pour livrer mon site ?</span><div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div></button>
+                    <div class="faq-answer"><div class="faq-answer-inner" id="faqA2">{{ content.get("faqA2", "Un site vitrine est livré en <strong>2 à 4 semaines</strong>. Je vous tiens informé à chaque étape.") | safe }}</div></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" id="faqQ3">Vous travaillez à distance ?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div></button>
-                    <div class="faq-answer"><div class="faq-answer-inner" id="faqA3">{{ content.get("faqA3", "") | safe }}</strong>, partout dans le monde. Par appel vidéo, email ou WhatsApp.</div></div>
+                    <button class="faq-question"><span id="faqQ3">Vous travaillez à distance ?</span><div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div></button>
+                    <div class="faq-answer"><div class="faq-answer-inner" id="faqA3">{{ content.get("faqA3", "Oui, <strong>100% à distance</strong>, partout dans le monde. Par appel vidéo, email ou WhatsApp.") | safe }}</div></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" id="faqQ4">Mon site sera-t-il visible sur Google ?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div></button>
-                    <div class="faq-answer"><div class="faq-answer-inner" id="faqA4">{{ content.get("faqA4", "") | safe }}</strong>. Score Lighthouse supérieur à 90/100 garanti.</div></div>
+                    <button class="faq-question"><span id="faqQ4">Mon site sera-t-il visible sur Google ?</span><div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div></button>
+                    <div class="faq-answer"><div class="faq-answer-inner" id="faqA4">{{ content.get("faqA4", "Le <strong>SEO est inclus dans chaque projet</strong>. Score Lighthouse supérieur à 90/100 garanti.") | safe }}</div></div>
                 </div>
                 <div class="faq-item">
-                    <button class="faq-question" id="faqQ5">Que se passe-t-il après la livraison ?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div></button>
-                    <div class="faq-answer"><div class="faq-answer-inner" id="faqA5">{{ content.get("faqA5", "") | safe }}</strong>. Forfaits maintenance disponibles.</div></div>
+                    <button class="faq-question"><span id="faqQ5">Que se passe-t-il après la livraison ?</span><div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div></button>
+                    <div class="faq-answer"><div class="faq-answer-inner" id="faqA5">{{ content.get("faqA5", "Je vous forme à la gestion de base et reste <strong>disponible pour toute question</strong>. Forfaits maintenance disponibles.") | safe }}</div></div>
                 </div>
             </div>
         </div>
     </section>
     </div>
 
-
     <div class="contact-wrapper">
     <section class="contact-section" id="contact" data-aos="fade-up">
         <div class="section-label" id="contactLabel">Travaillons ensemble</div>
         <div class="section-title" id="contactTitle">Parlons de votre projet</div>
-        <p id="contactDesc">{{ content.get("contactDesc", "") | safe }}</p>
-
+        <p id="contactDesc">{{ content.get("contactDesc", "Une idée ? Un besoin digital ? Envoyez-moi un message et je vous réponds sous 24h.") | safe }}</p>
         <form class="contact-form" action="https://formspree.io/f/xlgvlyke" method="POST">
             <input type="text" name="nom" id="contactName" placeholder="Votre nom" required>
             <input type="email" name="email" id="contactEmail" placeholder="Votre email" required>
             <textarea name="message" id="contactMessage" placeholder="Décrivez votre projet..."></textarea>
             <button type="submit" class="btn-dark" id="contactBtn" style="border:none;cursor:none;padding:16px;font-family:Inter,sans-serif;">Envoyer le message</button>
         </form>
-
         <p class="contact-note" id="contactNote">Je réponds sous 24h · Devis gratuit · Sans engagement</p>
     </section>
-</div>
-
+    </div>
 
     <footer style="position:relative;">
         <p id="footerText">© 2026 <span>Commit & Go</span> · Bruxelles, Belgique · Disponible partout dans le monde · <a href="/login" style="color:#333;text-decoration:none;">⚙️</a></p>
-        <a href="/login" style="position:absolute;bottom:32px;left:32px;color:#333;text-decoration:none;font-size:16px;">⚙️</a>
-</footer>
+    </footer>
 
+    <a href="https://wa.me/32469233980" target="_blank" class="whatsapp-btn" title="Contactez-moi sur WhatsApp">
+        <svg width="28" height="28" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/><path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.555 4.104 1.526 5.833L.057 23.527a.75.75 0 0 0 .916.916l5.694-1.469A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.703-.504-5.254-1.384l-.376-.217-3.892 1.004 1.004-3.892-.217-.376A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/></svg>
+    </a>
+
+    <div class="cookie-banner" id="cookieBanner">
+        <p>🍪 Ce site utilise des cookies pour améliorer votre expérience. En continuant, vous acceptez notre <a href="#">politique de confidentialité</a>.</p>
+        <div class="cookie-btns">
+            <button class="cookie-decline" onclick="declineCookies()">Refuser</button>
+            <button class="cookie-accept" onclick="acceptCookies()">Accepter</button>
+        </div>
+    </div>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script>
         AOS.init({ duration: 700, once: true });
 
-        // CURSEUR CUSTOM
         const cursor = document.getElementById('cursor');
         const follower = document.getElementById('follower');
         if (cursor && follower) {
             document.addEventListener('mousemove', e => {
                 cursor.style.left = e.clientX - 6 + 'px';
                 cursor.style.top = e.clientY - 6 + 'px';
-                setTimeout(() => {
-                    follower.style.left = e.clientX - 18 + 'px';
-                    follower.style.top = e.clientY - 18 + 'px';
-                }, 80);
+                setTimeout(() => { follower.style.left = e.clientX - 18 + 'px'; follower.style.top = e.clientY - 18 + 'px'; }, 80);
             });
             document.querySelectorAll('a, button').forEach(el => {
                 el.addEventListener('mouseenter', () => cursor.style.transform = 'scale(2.5)');
@@ -730,7 +463,6 @@
             });
         }
 
-        // COMPTEURS ANIMÉS
         const counters = document.querySelectorAll('.counter');
         const observer = new IntersectionObserver(entries => {
             entries.forEach(entry => {
@@ -749,15 +481,11 @@
         });
         counters.forEach(c => observer.observe(c));
 
-        // NAV ACTIVE
         window.addEventListener('scroll', () => {
             const nav = document.querySelector('nav');
-            if (nav) {
-                nav.style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.08)' : 'none';
-            }
+            if (nav) nav.style.boxShadow = window.scrollY > 20 ? '0 2px 20px rgba(0,0,0,0.08)' : 'none';
         });
 
-        // FAQ ACCORDEON
         document.querySelectorAll('.faq-question').forEach(btn => {
             btn.addEventListener('click', () => {
                 const item = btn.parentElement;
@@ -767,7 +495,6 @@
             });
         });
 
-        // COOKIE BANNER
         function acceptCookies() {
             localStorage.setItem('cookieConsent', 'accepted');
             const banner = document.getElementById('cookieBanner');
@@ -778,377 +505,22 @@
             const banner = document.getElementById('cookieBanner');
             if (banner) banner.classList.add('hidden');
         }
-        const cookieBanner = document.getElementById('cookieBanner');
-        if (localStorage.getItem('cookieConsent') && cookieBanner) {
-            cookieBanner.classList.add('hidden');
+        if (localStorage.getItem('cookieConsent')) {
+            const b = document.getElementById('cookieBanner');
+            if (b) b.classList.add('hidden');
         }
 
-        // TOGGLE LANGUE
-        let currentLang = "fr";
-
-        const translations = {
-          fr: {
-            navAbout: "À propos",
-            navServices: "Services",
-            navProjects: "Projets",
-            navContact: "Me contacter",
-
-            heroTag: "Disponible pour de nouveaux projets",
-            heroTitle: "Vos clients vous<br>cherchent en ligne.<br><em>Soyez là.</em>",
-            heroDesc: "Web dev européen, passionné par les interfaces modernes et l'aide à la visibilité digitale de mes clients.",
-            heroLocation: "📍 Bruxelles, Belgique — disponible partout dans le monde",
-            heroBtnProjects: "Voir mes projets",
-            heroBtnContact: "Me contacter",
-
-            bento1Title: "Livraison rapide & propre",
-            bento1Desc: "Sites livrés en 2 à 4 semaines. Code propre, documenté et facile à faire évoluer.",
-            bento2Label: "Score Lighthouse",
-            bento3Label: "Semaines de livraison",
-            bento4Title: "Sécurisé by design",
-            bento4Desc: "Aucune donnée exposée, code audité avant livraison",
-            bento5Title: "100% Responsive",
-            bento5Desc: "Parfait sur mobile, tablette et desktop",
-
-            aboutLabel: "À propos",
-            aboutTitle: "Qui suis-je ?",
-            aboutP1: "Je m'appelle <strong>Louan</strong>, web developer basé à <strong>Bruxelles</strong>. Je conçois des sites web et applications modernes qui aident mes clients à exister et rayonner en ligne.",
-            aboutP2: "Ce qui me différencie ? Je ne livre pas juste un site, je construis un <strong>outil digital qui travaille pour vous</strong>. Chaque projet est pensé pour être rapide, visible sur Google, et facile à utiliser.",
-            aboutP3: "Disponible pour des projets partout dans le monde. <strong>Tarifs de lancement disponibles</strong> pour mes premiers clients.",
-
-            servicesLabel: "Ce que je fais",
-            servicesTitle: "Mes Services",
-            service1Title: "Sites Web",
-            service1Desc: "Création de sites vitrines modernes, rapides et optimisés pour tous les écrans. Design soigné, code propre.",
-            service1Price: "→ Tarif de lancement disponible",
-            service2Title: "Web Apps",
-            service2Desc: "Applications web sur mesure pour automatiser et digitaliser vos processus métier. Livrées clé en main.",
-            service2Price: "→ Sur devis selon complexité",
-            service3Title: "SEO & Performance",
-            service3Desc: "Site optimisé pour Google dès la conception. Score Lighthouse supérieur à 90/100 garanti à la livraison.",
-            service3Price: "→ Inclus dans chaque projet",
-
-            stepsLabel: "Comment je travaille",
-            stepsTitle: "En 3 étapes simples",
-            step1Title: "On discute",
-            step1Desc: "On échange sur votre projet, vos besoins et vos objectifs. Un appel de 30 minutes suffit pour cadrer l'essentiel.",
-            step2Title: "Je conçois & code",
-            step2Desc: "Je design et développe votre site en 2 à 4 semaines. Vous suivez l'avancement et validez à chaque étape clé.",
-            step3Title: "On livre & vous brillez",
-            step3Desc: "Votre site est en ligne, optimisé et prêt à convertir. Je vous forme à la gestion de base et je reste disponible.",
-
-            projectsLabel: "Mes réalisations",
-            projectsTitle: "Projets récents",
-            project1Title: "Password Checker",
-            project1Desc: "Application web qui analyse la force des mots de passe en temps réel avec un système de scoring avancé.",
-            project1Link: "Voir le projet →",
-            project2Title: "Projets en cours",
-            project2Desc: "Nouveaux projets à venir — <span style='color:#0066FF;'>tarifs de lancement disponibles</span>",
-
-            testimonialsLabel: "Ce qu'ils disent",
-            testimonialsTitle: "Témoignages",
-            testimonial1Text: '"Louan a livré notre site en 3 semaines chrono. Design moderne, rapide et exactement ce qu\'on voulait. On recommande les yeux fermés !"',
-            testimonial1Role: "Gérante — Boutique en ligne",
-            testimonial2Text: '"Très professionnel, à l\'écoute et réactif. Notre site est maintenant visible sur Google et on reçoit des demandes chaque semaine."',
-            testimonial2Role: "Fondateur — Startup Tech",
-            testimonial3Text: '"Rapport qualité-prix imbattable. Louan a su comprendre nos besoins dès le premier appel et le résultat dépasse nos attentes."',
-            testimonial3Role: "Directrice — Cabinet Conseil",
-
-            faqLabel: "Questions fréquentes",
-            faqTitle: "FAQ",
-            faqIntro: "Pas de réponse ici ?<br>Écrivez-moi directement.",
-            faqBtn: "Me contacter",
-            faqQ1: "Combien coûte un site web ?",
-            faqA1: "Les tarifs varient selon la complexité. Je propose des <strong>tarifs de lancement attractifs</strong> pour mes premiers clients. Devis gratuit sous 24h.",
-            faqQ2: "Combien de temps pour livrer mon site ?",
-            faqA2: "Un site vitrine est livré en <strong>2 à 4 semaines</strong>. Je vous tiens informé à chaque étape.",
-            faqQ3: "Vous travaillez à distance ?",
-            faqA3: "Oui, <strong>100% à distance</strong>, partout dans le monde. Par appel vidéo, email ou WhatsApp.",
-            faqQ4: "Mon site sera-t-il visible sur Google ?",
-            faqA4: "Le <strong>SEO est inclus dans chaque projet</strong>. Score Lighthouse supérieur à 90/100 garanti.",
-            faqQ5: "Que se passe-t-il après la livraison ?",
-            faqA5: "Je vous forme à la gestion de base et reste <strong>disponible pour toute question</strong>. Forfaits maintenance disponibles.",
-
-            contactLabel: "Travaillons ensemble",
-            contactTitle: "Parlons de votre projet",
-            contactDesc: "Une idée ? Un besoin digital ? Envoyez-moi un message et je vous réponds sous 24h.",
-            contactBtn: "Envoyer le message",
-            contactNote: "Je réponds sous 24h · Devis gratuit · Sans engagement",
-            contactNamePlaceholder: "Votre nom",
-            contactEmailPlaceholder: "Votre email",
-            contactMessagePlaceholder: "Décrivez votre projet...",
-
-            footerText: "© 2026 <span>Commit & Go</span> · Bruxelles, Belgique · Disponible partout dans le monde",
-
-            langButton: "🌐 EN"
-          },
-          en: {
-            navAbout: "About",
-            navServices: "Services",
-            navProjects: "Projects",
-            navContact: "Contact me",
-
-            heroTag: "Available for new projects",
-            heroTitle: "Your clients are<br>searching online.<br><em>Be there.</em>",
-            heroDesc: "European web developer, passionate about modern interfaces and helping my clients grow their digital presence.",
-            heroLocation: "📍 Brussels, Belgium — available worldwide",
-            heroBtnProjects: "View my projects",
-            heroBtnContact: "Contact me",
-
-            bento1Title: "Fast & clean delivery",
-            bento1Desc: "Websites delivered in 2 to 4 weeks. Clean, documented code that is easy to evolve.",
-            bento2Label: "Lighthouse score",
-            bento3Label: "Delivery weeks",
-            bento4Title: "Secure by design",
-            bento4Desc: "No exposed data, code audited before delivery",
-            bento5Title: "100% Responsive",
-            bento5Desc: "Perfect on mobile, tablet and desktop",
-
-            aboutLabel: "About",
-            aboutTitle: "Who am I?",
-            aboutP1: "My name is <strong>Louan</strong>, a web developer based in <strong>Brussels</strong>. I design modern websites and applications that help my clients exist and shine online.",
-            aboutP2: "What makes me different? I don't just deliver a website, I build a <strong>digital tool that works for you</strong>. Every project is designed to be fast, visible on Google, and easy to use.",
-            aboutP3: "Available for projects worldwide. <strong>Launch pricing available</strong> for my first clients.",
-
-            servicesLabel: "What I do",
-            servicesTitle: "My Services",
-            service1Title: "Websites",
-            service1Desc: "Creation of modern, fast showcase websites optimized for every screen. Clean design, clean code.",
-            service1Price: "→ Launch pricing available",
-            service2Title: "Web Apps",
-            service2Desc: "Custom web applications to automate and digitize your business processes. Delivered turnkey.",
-            service2Price: "→ Quote based on complexity",
-            service3Title: "SEO & Performance",
-            service3Desc: "Website optimized for Google from the start. Lighthouse score above 90/100 guaranteed on delivery.",
-            service3Price: "→ Included in every project",
-
-            stepsLabel: "How I work",
-            stepsTitle: "In 3 simple steps",
-            step1Title: "We talk",
-            step1Desc: "We discuss your project, your needs and your goals. A 30-minute call is enough to frame the essentials.",
-            step2Title: "I design & code",
-            step2Desc: "I design and develop your website in 2 to 4 weeks. You follow the progress and validate each key step.",
-            step3Title: "We launch & you shine",
-            step3Desc: "Your website goes live, optimized and ready to convert. I train you on the basics and remain available.",
-
-            projectsLabel: "My work",
-            projectsTitle: "Recent projects",
-            project1Title: "Password Checker",
-            project1Desc: "Web app that analyzes password strength in real time with an advanced scoring system.",
-            project1Link: "View project →",
-            project2Title: "Projects in progress",
-            project2Desc: "New projects coming soon — <span style='color:#0066FF;'>launch pricing available</span>",
-
-            testimonialsLabel: "What they say",
-            testimonialsTitle: "Testimonials",
-            testimonial1Text: '"Louan delivered our website in 3 weeks flat. Modern design, fast and exactly what we wanted. We highly recommend him!"',
-            testimonial1Role: "Manager — Online store",
-            testimonial2Text: '"Very professional, attentive and responsive. Our website is now visible on Google and we receive inquiries every week."',
-            testimonial2Role: "Founder — Tech startup",
-            testimonial3Text: '"Unbeatable value for money. Louan understood our needs from the first call and the result exceeded our expectations."',
-            testimonial3Role: "Director — Consulting firm",
-
-            faqLabel: "Frequently asked questions",
-            faqTitle: "FAQ",
-            faqIntro: "No answer here?<br>Write to me directly.",
-            faqBtn: "Contact me",
-            faqQ1: "How much does a website cost?",
-            faqA1: "Pricing varies depending on complexity. I offer <strong>attractive launch pricing</strong> for my first clients. Free quote within 24h.",
-            faqQ2: "How long does it take to deliver my site?",
-            faqA2: "A showcase website is delivered in <strong>2 to 4 weeks</strong>. I keep you informed at every step.",
-            faqQ3: "Do you work remotely?",
-            faqA3: "Yes, <strong>100% remotely</strong>, anywhere in the world. Via video call, email or WhatsApp.",
-            faqQ4: "Will my website be visible on Google?",
-            faqA4: "<strong>SEO is included in every project</strong>. Lighthouse score above 90/100 guaranteed.",
-            faqQ5: "What happens after delivery?",
-            faqA5: "I train you on the basics and remain <strong>available for any question</strong>. Maintenance packages available.",
-
-            contactLabel: "Let's work together",
-            contactTitle: "Let's talk about your project",
-            contactDesc: "Got an idea? A digital need? Send me a message and I'll reply within 24 hours.",
-            contactBtn: "Send message",
-            contactNote: "Reply within 24h · Free quote · No commitment",
-            contactNamePlaceholder: "Your name",
-            contactEmailPlaceholder: "Your email",
-            contactMessagePlaceholder: "Describe your project...",
-
-            footerText: "© 2026 <span>Commit & Go</span> · Brussels, Belgium · Available worldwide",
-
-            langButton: "🌐 FR"
-          }
-        };
-
-        function setText(id, value, useHTML = false) {
-            const el = document.getElementById(id);
-            if (!el) return;
-            if (useHTML) el.innerHTML = value;
-            else el.textContent = value;
-        }
-
-        function applyTranslations() {
-            const t = translations[currentLang];
-
-            setText("navAbout", t.navAbout);
-            setText("navServices", t.navServices);
-            setText("navProjects", t.navProjects);
-            setText("navContact", t.navContact);
-
-            setText("heroTag", t.heroTag);
-            setText("heroTitle", t.heroTitle, true);
-            setText("heroDesc", t.heroDesc);
-            setText("heroLocation", t.heroLocation);
-            setText("heroBtnProjects", t.heroBtnProjects);
-            setText("heroBtnContact", t.heroBtnContact);
-
-            setText("bento1Title", t.bento1Title);
-            setText("bento1Desc", t.bento1Desc);
-            setText("bento2Label", t.bento2Label);
-            setText("bento3Label", t.bento3Label);
-            setText("bento4Title", t.bento4Title);
-            setText("bento4Desc", t.bento4Desc);
-            setText("bento5Title", t.bento5Title);
-            setText("bento5Desc", t.bento5Desc);
-
-            setText("aboutLabel", t.aboutLabel);
-            setText("aboutTitle", t.aboutTitle);
-            setText("aboutP1", t.aboutP1, true);
-            setText("aboutP2", t.aboutP2, true);
-            setText("aboutP3", t.aboutP3, true);
-
-            setText("servicesLabel", t.servicesLabel);
-            setText("servicesTitle", t.servicesTitle);
-            setText("service1Title", t.service1Title);
-            setText("service1Desc", t.service1Desc);
-            setText("service1Price", t.service1Price);
-            setText("service2Title", t.service2Title);
-            setText("service2Desc", t.service2Desc);
-            setText("service2Price", t.service2Price);
-            setText("service3Title", t.service3Title);
-            setText("service3Desc", t.service3Desc);
-            setText("service3Price", t.service3Price);
-
-            setText("stepsLabel", t.stepsLabel);
-            setText("stepsTitle", t.stepsTitle);
-            setText("step1Title", t.step1Title);
-            setText("step1Desc", t.step1Desc);
-            setText("step2Title", t.step2Title);
-            setText("step2Desc", t.step2Desc);
-            setText("step3Title", t.step3Title);
-            setText("step3Desc", t.step3Desc);
-
-            setText("projectsLabel", t.projectsLabel);
-            setText("projectsTitle", t.projectsTitle);
-            setText("project1Title", t.project1Title);
-            setText("project1Desc", t.project1Desc);
-            setText("project1Link", t.project1Link);
-            setText("project2Title", t.project2Title);
-            setText("project2Desc", t.project2Desc, true);
-
-            setText("testimonialsLabel", t.testimonialsLabel);
-            setText("testimonialsTitle", t.testimonialsTitle);
-            setText("testimonial1Text", t.testimonial1Text);
-            setText("testimonial1Role", t.testimonial1Role);
-            setText("testimonial2Text", t.testimonial2Text);
-            setText("testimonial2Role", t.testimonial2Role);
-            setText("testimonial3Text", t.testimonial3Text);
-            setText("testimonial3Role", t.testimonial3Role);
-
-            setText("faqLabel", t.faqLabel);
-            setText("faqTitle", t.faqTitle);
-            setText("faqIntro", t.faqIntro, true);
-            setText("faqBtn", t.faqBtn);
-            setText("faqQ1", t.faqQ1);
-            setText("faqA1", t.faqA1, true);
-            setText("faqQ2", t.faqQ2);
-            setText("faqA2", t.faqA2, true);
-            setText("faqQ3", t.faqQ3);
-            setText("faqA3", t.faqA3, true);
-            setText("faqQ4", t.faqQ4);
-            setText("faqA4", t.faqA4, true);
-            setText("faqQ5", t.faqQ5);
-            setText("faqA5", t.faqA5, true);
-
-            setText("contactLabel", t.contactLabel);
-            setText("contactTitle", t.contactTitle);
-            setText("contactDesc", t.contactDesc);
-            setText("contactBtn", t.contactBtn);
-            setText("contactNote", t.contactNote);
-
-            const nameInput = document.getElementById("contactName");
-            const emailInput = document.getElementById("contactEmail");
-            const messageInput = document.getElementById("contactMessage");
-            if (nameInput) nameInput.placeholder = t.contactNamePlaceholder;
-            if (emailInput) emailInput.placeholder = t.contactEmailPlaceholder;
-            if (messageInput) messageInput.placeholder = t.contactMessagePlaceholder;
-
-            setText("footerText", t.footerText, true);
-            setText("langToggle", t.langButton);
-
-            document.documentElement.lang = currentLang;
-        }
-
-        document.addEventListener("DOMContentLoaded", function () {
-            const langButton = document.getElementById("langToggle");
-            if (langButton) {
-                langButton.addEventListener("click", function () {
-                    currentLang = currentLang === "fr" ? "en" : "fr";
-                    applyTranslations();
-                });
-            }
-            applyTranslations();
-        });
-
-        // HAMBURGER MENU
         function toggleMenu() {
             const hamburger = document.getElementById('hamburger');
             const mobileMenu = document.getElementById('mobileMenu');
+            if (!hamburger || !mobileMenu) return;
             hamburger.classList.toggle('open');
             mobileMenu.classList.toggle('open');
         }
-    </script>
-    
-    <!-- BOUTON WHATSAPP FLOTTANT -->
-    <a href="https://wa.me/32469233980" target="_blank" class="whatsapp-btn" title="Contactez-moi sur WhatsApp">
-        <svg width="28" height="28" viewBox="0 0 24 24" fill="white">
-            <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z"/>
-            <path d="M12 0C5.373 0 0 5.373 0 12c0 2.115.555 4.104 1.526 5.833L.057 23.527a.75.75 0 0 0 .916.916l5.694-1.469A11.953 11.953 0 0 0 12 24c6.627 0 12-5.373 12-12S18.627 0 12 0zm0 22c-1.907 0-3.703-.504-5.254-1.384l-.376-.217-3.892 1.004 1.004-3.892-.217-.376A9.956 9.956 0 0 1 2 12C2 6.477 6.477 2 12 2s10 4.477 10 10-4.477 10-10 10z"/>
-        </svg>
-    </a>
-    <style>
-        .whatsapp-btn {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: #25D366;
-            width: 60px;
-            height: 60px;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            box-shadow: 0 4px 20px rgba(37,211,102,0.4);
-            z-index: 9999;
-            transition: all 0.3s;
-            cursor: none;
-        }
-        .whatsapp-btn:hover {
-            transform: scale(1.1);
-            box-shadow: 0 6px 25px rgba(37,211,102,0.5);
-        }
-    </style>
 
-    <!-- COOKIE BANNER -->
-    <div class="cookie-banner" id="cookieBanner">
-        <p>🍪 Ce site utilise des cookies pour améliorer votre expérience. En continuant, vous acceptez notre <a href="#">politique de confidentialité</a>.</p>
-        <div class="cookie-btns">
-            <button class="cookie-decline" onclick="declineCookies()">Refuser</button>
-            <button class="cookie-accept" onclick="acceptCookies()">Accepter</button>
-        </div>
-    </div>
-
-    <script>
-        // ADMIN INLINE
+        // ADMIN
         let editMode = false;
-        const editableIds = ['heroTitle', 'heroDesc', 'heroLocation', 'aboutP1', 'aboutP2', 'aboutP3', 'service1Title', 'service1Desc', 'service2Title', 'service2Desc', 'service3Title', 'service3Desc', 'step1Title', 'step1Desc', 'step2Title', 'step2Desc', 'step3Title', 'step3Desc', 'testimonial1Text', 'testimonial2Text', 'testimonial3Text', 'faqA1', 'faqA2', 'faqA3', 'faqA4', 'faqA5', 'contactDesc'];
+        const editableIds = ['heroTitle','heroDesc','heroLocation','aboutP1','aboutP2','aboutP3','service1Title','service1Desc','service2Title','service2Desc','service3Title','service3Desc','step1Title','step1Desc','step2Title','step2Desc','step3Title','step3Desc','testimonial1Text','testimonial2Text','testimonial3Text','faqA1','faqA2','faqA3','faqA4','faqA5','contactDesc','project1Title','project1Desc','project2Title','project2Desc'];
 
         async function checkAdmin() {
             const res = await fetch('/api/is-admin');
@@ -1181,15 +553,20 @@
                 const el = document.getElementById(id);
                 if (el) data[id] = el.innerHTML;
             });
-            await fetch('/api/content', {
+            const res = await fetch('/api/content', {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify(data)
             });
-            alert('✅ Modifications sauvegardées !');
+            if (res.ok) {
+                alert('✅ Modifications sauvegardées !');
+            } else {
+                alert('❌ Erreur lors de la sauvegarde');
+            }
         }
 
         checkAdmin();
     </script>
 </body>
 </html>
+
