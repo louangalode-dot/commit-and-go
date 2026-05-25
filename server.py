@@ -54,10 +54,11 @@ def index():
 @app.route('/login', methods=['GET', 'POST'])
 def login():
     if request.method == 'POST':
-        if request.form.get('password') == 'admin123':
+        data = request.get_json()
+        if data and data.get('password') == 'admin123':
             session['logged_in'] = True
-            return redirect('/')
-        return render_template('login.html', error='Mot de passe incorrect')
+            return jsonify({'success': True})
+        return jsonify({'error': 'Mot de passe incorrect'}), 401
     return render_template('login.html')
 
 @app.route('/logout')
