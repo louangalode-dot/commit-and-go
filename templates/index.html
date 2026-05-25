@@ -498,9 +498,9 @@
         </div>
 
         <div class="about-right" data-aos="fade-left" data-aos-delay="100">
-            <p id="aboutP1">Je m'appelle <strong>Louan</strong>, web developer basé à <strong>Bruxelles</strong>. Je conçois des sites web et applications modernes qui aident mes clients à exister et rayonner en ligne.</p>
-            <p id="aboutP2">Ce qui me différencie ? Je ne livre pas juste un site, je construis un <strong>outil digital qui travaille pour vous</strong>. Chaque projet est pensé pour être rapide, visible sur Google, et facile à utiliser.</p>
-            <p id="aboutP3">Disponible pour des projets partout dans le monde. <strong>Tarifs de lancement disponibles</strong> pour mes premiers clients.</p>
+            <p id="aboutP1">{{ content.get("aboutP1", "") | safe }}</strong>, web developer basé à <strong>Bruxelles</strong>. Je conçois des sites web et applications modernes qui aident mes clients à exister et rayonner en ligne.</p>
+            <p id="aboutP2">{{ content.get("aboutP2", "") | safe }}</strong>. Chaque projet est pensé pour être rapide, visible sur Google, et facile à utiliser.</p>
+            <p id="aboutP3">{{ content.get("aboutP3", "") | safe }}</strong> pour mes premiers clients.</p>
             <div class="about-tags">
                 <span class="tag">HTML · CSS · JS</span>
                 <span class="tag">Python · Flask</span>
@@ -523,20 +523,20 @@
         <div class="cards" data-aos="fade-up" data-aos-delay="100">
             <div class="card">
                 <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
-                <h3 id="service1Title">Sites Web</h3>
-                <p id="service1Desc">Création de sites vitrines modernes, rapides et optimisés pour tous les écrans. Design soigné, code propre.</p>
+                <h3 id="service1Title">{{ content.get("service1Title", "") | safe }}</h3>
+                <p id="service1Desc">{{ content.get("service1Desc", "") | safe }}</p>
                 <div class="card-price" id="service1Price">→ Tarif de lancement disponible</div>
             </div>
             <div class="card">
                 <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg></div>
-                <h3 id="service2Title">Web Apps</h3>
-                <p id="service2Desc">Applications web sur mesure pour automatiser et digitaliser vos processus métier. Livrées clé en main.</p>
+                <h3 id="service2Title">{{ content.get("service2Title", "") | safe }}</h3>
+                <p id="service2Desc">{{ content.get("service2Desc", "") | safe }}</p>
                 <div class="card-price" id="service2Price">→ Sur devis selon complexité</div>
             </div>
             <div class="card">
                 <div class="card-icon"><svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg></div>
-                <h3 id="service3Title">SEO & Performance</h3>
-                <p id="service3Desc">Site optimisé pour Google dès la conception. Score Lighthouse supérieur à 90/100 garanti à la livraison.</p>
+                <h3 id="service3Title">{{ content.get("service3Title", "") | safe }}</h3>
+                <p id="service3Desc">{{ content.get("service3Desc", "") | safe }}</p>
                 <div class="card-price" id="service3Price">→ Inclus dans chaque projet</div>
             </div>
         </div>
@@ -556,24 +556,24 @@
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
                 </div>
                 <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:#0066FF;margin-bottom:12px;">ÉTAPE 01</div>
-                <h3 style="font-size:20px;font-weight:800;margin-bottom:12px;" id="step1Title">On discute</h3>
-                <p style="color:#666;font-size:15px;line-height:1.6;" id="step1Desc">On échange sur votre projet, vos besoins et vos objectifs. Un appel de 30 minutes suffit pour cadrer l'essentiel.</p>
+                <h3 style="font-size:20px;font-weight:800;margin-bottom:12px;" id="step1Title">{{ content.get("step1Title", "") | safe }}</h3>
+                <p style="color:#666;font-size:15px;line-height:1.6;" id="step1Desc">{{ content.get("step1Desc", "") | safe }}</p>
             </div>
             <div style="text-align:center;">
                 <div style="width:60px;height:60px;background:#EEF4FF;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
                 </div>
                 <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:#0066FF;margin-bottom:12px;">ÉTAPE 02</div>
-                <h3 style="font-size:20px;font-weight:800;margin-bottom:12px;" id="step2Title">Je conçois & code</h3>
-                <p style="color:#666;font-size:15px;line-height:1.6;" id="step2Desc">Je design et développe votre site en 2 à 4 semaines. Vous suivez l'avancement et validez à chaque étape clé.</p>
+                <h3 style="font-size:20px;font-weight:800;margin-bottom:12px;" id="step2Title">{{ content.get("step2Title", "") | safe }}</h3>
+                <p style="color:#666;font-size:15px;line-height:1.6;" id="step2Desc">{{ content.get("step2Desc", "") | safe }}</p>
             </div>
             <div style="text-align:center;">
                 <div style="width:60px;height:60px;background:#EEF4FF;border-radius:50%;display:flex;align-items:center;justify-content:center;margin:0 auto 24px;">
                     <svg width="28" height="28" viewBox="0 0 24 24" fill="none" stroke="#0066FF" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
                 </div>
                 <div style="font-size:13px;font-weight:700;letter-spacing:2px;color:#0066FF;margin-bottom:12px;">ÉTAPE 03</div>
-                <h3 style="font-size:20px;font-weight:800;margin-bottom:12px;" id="step3Title">On livre & vous brillez</h3>
-                <p style="color:#666;font-size:15px;line-height:1.6;" id="step3Desc">Votre site est en ligne, optimisé et prêt à convertir. Je vous forme à la gestion de base et je reste disponible.</p>
+                <h3 style="font-size:20px;font-weight:800;margin-bottom:12px;" id="step3Title">{{ content.get("step3Title", "") | safe }}</h3>
+                <p style="color:#666;font-size:15px;line-height:1.6;" id="step3Desc">{{ content.get("step3Desc", "") | safe }}</p>
             </div>
         </div>
     </section>
@@ -612,7 +612,7 @@
         <div class="temoignages-grid" data-aos="fade-up" data-aos-delay="100">
             <div class="temoignage-card">
                 <div class="temoignage-stars">★★★★★</div>
-                <p class="temoignage-text" id="testimonial1Text">"Louan a livré notre site en 3 semaines chrono. Design moderne, rapide et exactement ce qu'on voulait. On recommande les yeux fermés !"</p>
+                <p class="temoignage-text" id="testimonial1Text">{{ content.get("testimonial1Text", "") | safe }}</p>
                 <div class="temoignage-author">
                     <div class="temoignage-avatar">S</div>
                     <div>
@@ -623,7 +623,7 @@
             </div>
             <div class="temoignage-card">
                 <div class="temoignage-stars">★★★★★</div>
-                <p class="temoignage-text" id="testimonial2Text">"Très professionnel, à l'écoute et réactif. Notre site est maintenant visible sur Google et on reçoit des demandes chaque semaine."</p>
+                <p class="temoignage-text" id="testimonial2Text">{{ content.get("testimonial2Text", "") | safe }}</p>
                 <div class="temoignage-author">
                     <div class="temoignage-avatar">T</div>
                     <div>
@@ -634,7 +634,7 @@
             </div>
             <div class="temoignage-card">
                 <div class="temoignage-stars">★★★★★</div>
-                <p class="temoignage-text" id="testimonial3Text">"Rapport qualité-prix imbattable. Louan a su comprendre nos besoins dès le premier appel et le résultat dépasse nos attentes."</p>
+                <p class="temoignage-text" id="testimonial3Text">{{ content.get("testimonial3Text", "") | safe }}</p>
                 <div class="temoignage-author">
                     <div class="temoignage-avatar">A</div>
                     <div>
@@ -660,23 +660,23 @@
             <div class="faq-list" data-aos="fade-left" data-aos-delay="100">
                 <div class="faq-item open">
                     <button class="faq-question" id="faqQ1">Combien coûte un site web ?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div></button>
-                    <div class="faq-answer"><div class="faq-answer-inner" id="faqA1">Les tarifs varient selon la complexité. Je propose des <strong>tarifs de lancement attractifs</strong> pour mes premiers clients. Devis gratuit sous 24h.</div></div>
+                    <div class="faq-answer"><div class="faq-answer-inner" id="faqA1">{{ content.get("faqA1", "") | safe }}</strong> pour mes premiers clients. Devis gratuit sous 24h.</div></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" id="faqQ2">Combien de temps pour livrer mon site ?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div></button>
-                    <div class="faq-answer"><div class="faq-answer-inner" id="faqA2">Un site vitrine est livré en <strong>2 à 4 semaines</strong>. Je vous tiens informé à chaque étape.</div></div>
+                    <div class="faq-answer"><div class="faq-answer-inner" id="faqA2">{{ content.get("faqA2", "") | safe }}</strong>. Je vous tiens informé à chaque étape.</div></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" id="faqQ3">Vous travaillez à distance ?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div></button>
-                    <div class="faq-answer"><div class="faq-answer-inner" id="faqA3">Oui, <strong>100% à distance</strong>, partout dans le monde. Par appel vidéo, email ou WhatsApp.</div></div>
+                    <div class="faq-answer"><div class="faq-answer-inner" id="faqA3">{{ content.get("faqA3", "") | safe }}</strong>, partout dans le monde. Par appel vidéo, email ou WhatsApp.</div></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" id="faqQ4">Mon site sera-t-il visible sur Google ?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div></button>
-                    <div class="faq-answer"><div class="faq-answer-inner" id="faqA4">Le <strong>SEO est inclus dans chaque projet</strong>. Score Lighthouse supérieur à 90/100 garanti.</div></div>
+                    <div class="faq-answer"><div class="faq-answer-inner" id="faqA4">{{ content.get("faqA4", "") | safe }}</strong>. Score Lighthouse supérieur à 90/100 garanti.</div></div>
                 </div>
                 <div class="faq-item">
                     <button class="faq-question" id="faqQ5">Que se passe-t-il après la livraison ?<div class="faq-icon"><svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#111" stroke-width="2.5"><path d="M12 5v14M5 12h14"/></svg></div></button>
-                    <div class="faq-answer"><div class="faq-answer-inner" id="faqA5">Je vous forme à la gestion de base et reste <strong>disponible pour toute question</strong>. Forfaits maintenance disponibles.</div></div>
+                    <div class="faq-answer"><div class="faq-answer-inner" id="faqA5">{{ content.get("faqA5", "") | safe }}</strong>. Forfaits maintenance disponibles.</div></div>
                 </div>
             </div>
         </div>
@@ -688,7 +688,7 @@
     <section class="contact-section" id="contact" data-aos="fade-up">
         <div class="section-label" id="contactLabel">Travaillons ensemble</div>
         <div class="section-title" id="contactTitle">Parlons de votre projet</div>
-        <p id="contactDesc">Une idée ? Un besoin digital ? Envoyez-moi un message et je vous réponds sous 24h.</p>
+        <p id="contactDesc">{{ content.get("contactDesc", "") | safe }}</p>
 
         <form class="contact-form" action="https://formspree.io/f/xlgvlyke" method="POST">
             <input type="text" name="nom" id="contactName" placeholder="Votre nom" required>
