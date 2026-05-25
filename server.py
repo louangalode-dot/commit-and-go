@@ -1,6 +1,5 @@
 from flask import Flask, request, jsonify, session, redirect, render_template
 import os
-import json
 import psycopg2
 from psycopg2.extras import RealDictCursor
 
@@ -82,6 +81,7 @@ def update_content():
     save_content(data)
     return jsonify({'success': True})
 
+init_db()
+
 if __name__ == '__main__':
-    init_db()
     app.run(debug=True, port=5000)
