@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Commit & Go — Admin Login</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;900&display=swap" rel="stylesheet">
+    <style>
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        body { font-family: 'Inter', sans-serif; background: #F7F7F5; display: flex; align-items: center; justify-content: center; min-height: 100vh; }
+        .card { background: white; border: 1px solid #E8E8E4; border-radius: 20px; padding: 48px; width: 100%; max-width: 400px; }
+        .logo { font-size: 16px; font-weight: 900; letter-spacing: 3px; color: #111; margin-bottom: 32px; }
+        .logo span { color: #0066FF; }
+        h1 { font-size: 24px; font-weight: 800; margin-bottom: 8px; }
+        p { color: #888; font-size: 14px; margin-bottom: 32px; }
+        input { width: 100%; padding: 14px 18px; border: 1px solid #E8E8E4; border-radius: 12px; font-size: 15px; outline: none; font-family: 'Inter', sans-serif; margin-bottom: 14px; transition: all 0.2s; }
+        input:focus { border-color: #0066FF; box-shadow: 0 0 0 3px rgba(0,102,255,0.1); }
+        button { width: 100%; background: #111; color: white; border: none; padding: 14px; border-radius: 100px; font-size: 15px; font-weight: 600; font-family: 'Inter', sans-serif; cursor: pointer; transition: all 0.2s; }
+        button:hover { background: #0066FF; }
+        .error { color: #ef4444; font-size: 13px; margin-top: 8px; display: none; }
+    </style>
+</head>
+<body>
+    <div class="card">
+        <div class="logo">COMMIT<span> & GO</span></div>
+        <h1>Panneau Admin</h1>
+        <p>Connectez-vous pour modifier votre site.</p>
+        <input type="password" id="password" placeholder="Mot de passe" onkeypress="if(event.key==='Enter') login()">
+        <button onclick="login()">Se connecter</button>
+        <div class="error" id="error">Mot de passe incorrect</div>
+    </div>
+    <script>
+        async function login() {
+            const password = document.getElementById('password').value;
+            const res = await fetch('/login', {
+                method: 'POST',
+                headers: { 'Content-Type': 'application/json' },
+                body: JSON.stringify({ password })
+            });
+            const data = await res.json();
+            if (data.success) {
+                window.location.href = data.redirect || '/';
+            } else {
+                document.getElementById('error').style.display = 'block';
+            }
+        }
+    </script>
+</body>
+</html>
