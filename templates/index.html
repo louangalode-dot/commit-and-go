@@ -453,8 +453,8 @@
     <section class="hero">
         <div class="hero-left" data-aos="fade-right">
             <div class="hero-tag"><span class="dot"></span> <span id="heroTag">Disponible pour de nouveaux projets</span></div>
-            <h1 id="heroTitle">Vos clients vous<br>cherchent en ligne.<br><em>Soyez là.</em></h1>
-            <p class="hero-desc" id="heroDesc">Web dev européen, passionné par les interfaces modernes et l'aide à la visibilité digitale de mes clients.</p>
+            <h1 id="heroTitle">{{ content.get("heroTitle", "Vos clients vous<br>cherchent en ligne.<br><em>Soyez là.</em>") | safe }}</h1>
+            <p class="hero-desc" id="heroDesc">{{ content.get("heroDesc", "Web dev européen, passionné par les interfaces modernes et l'aide à la visibilité digitale de mes clients.") }}</p>
             <p class="hero-location" id="heroLocation">📍 Bruxelles, Belgique — disponible partout dans le monde</p>
             <div class="hero-btns">
                 <a href="#projets" class="btn-dark" id="heroBtnProjects">Voir mes projets</a>
